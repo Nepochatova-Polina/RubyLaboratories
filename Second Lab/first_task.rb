@@ -1,4 +1,4 @@
-class SecondLab
+class FirstTask
   count = 0
   sum = 0
   x = [50, 62, 71, 82, 112, 159, 217, 264, 299, 354,
@@ -10,7 +10,7 @@ class SecondLab
        256, 228, 199, 151, 125, 121, 160, 211,
        247, 267, 273, 271, 250, 217, 188, 179, 176]
 
-  while count <= 34 do
+  while count <= x.size do
     sum += (x[count] + x[count + 1])*(y[count] - y[count + 1])
     count += 1
   end
