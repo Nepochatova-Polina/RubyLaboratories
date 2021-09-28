@@ -8,5 +8,5 @@ class First
    print "Enter number z:"
    z = gets.chomp.to_i
   y = ($Enum ** (Math.tan(x)) ** 2) + (Math.sqrt((t-z).abs)/Math.cos($PInum ** 2) ** 2 + $Enum ** $PInum * z ** 2) + 2.3 * 10 ** 1.6
-  puts y
+  puts y,z
 end
