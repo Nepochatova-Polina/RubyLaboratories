@@ -1,6 +1,5 @@
 class SecondLab
   count = 0
-  sum1 = 0
   sum = 0
   x = [50, 62, 71, 82, 112, 159, 217, 264, 299, 354,
        402, 435, 476, 489, 503, 506, 508, 497, 483, 419,
@@ -11,17 +10,12 @@ class SecondLab
        256, 228, 199, 151, 125, 121, 160, 211,
        247, 267, 273, 271, 250, 217, 188, 179, 176]
 
-  while count <= 33 do
-    sum += x[count] * y[count + 1]
+  while count <= 34 do
+    sum += (x[count] + x[count + 1])*(y[count] - y[count + 1])
     count += 1
   end
-  sum += x[34] * y[0]
-  count = 0
-  while count <= 33 do
-    sum1 += x[count + 1] * y[count]
-    count += 1
-  end
-  sum - sum1 - x[0] * y[34]
+  p sum
+  square = (sum).abs * 0.5
 
-  puts "Using Gauss formula result: " + sum1.to_s
+  puts "Using standart formula result: " + square.to_s
 end
