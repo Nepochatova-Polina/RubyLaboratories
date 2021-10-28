@@ -1,4 +1,4 @@
-class FourthTask
+
   num = 333
   sum = ""
   while num != 1
@@ -6,4 +6,3 @@ class FourthTask
     num = num / 2
   end
   puts sum
-end

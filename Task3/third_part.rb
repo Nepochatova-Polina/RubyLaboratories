@@ -1,4 +1,3 @@
-class ThirdPart
   l = 0.0
   result = 0.0
   loop do
@@ -24,4 +23,4 @@ class ThirdPart
     break if n == 11
   end
   puts result
-end
+

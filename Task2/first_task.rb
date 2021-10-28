@@ -1,4 +1,3 @@
-class FirstTask
   count = 0
   sum = 0
   x = [50, 62, 71, 82, 112, 159, 217, 264, 299, 354,
@@ -18,4 +17,3 @@ class FirstTask
   square = (sum).abs * 0.5
 
   puts "Using standart formula result: " + square.to_s
-end

@@ -1,4 +1,3 @@
-class SecondPart
   e = 2.718
   print "Enter number x:"
   x = gets.chomp.to_i
@@ -16,4 +15,3 @@ class SecondPart
       puts result
     end
   end
-end

@@ -1,4 +1,3 @@
-class ThirdTask
   num = [1,0,1,0,1,0,1,0,1,0,1,0,1,0]
   x = num.size
   sum = 0
@@ -7,4 +6,3 @@ class ThirdTask
     x -= 1
   end
   puts sum
-end

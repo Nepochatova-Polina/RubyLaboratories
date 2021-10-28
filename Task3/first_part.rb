@@ -1,4 +1,3 @@
-class FirstPart
   a = true
   b = false
   c = true
@@ -25,4 +24,3 @@ class FirstPart
   p = true
   result = !((Math.exp(x ** 2) - Math.sin(x)) < 3.14) && (p || !p)
   puts "2." + result.to_s
-end

@@ -21,7 +21,7 @@ def second_task(x)
   n = 0
   result = 0
   while (2 * result - Math.log(x, Math.exp(1))).abs > $eps do
-    result += (2*(-1)**n * (2 ** 2*n -1) /factorial(2*n)) * n **(6/7) * x ** (2*n - 1)
+    result += (x - 1)**(2*n+1) / ((2*n + 1)*(x + 1)**(2*n+1))
     n += 1
   end
   result *= 2
