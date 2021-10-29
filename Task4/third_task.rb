@@ -5,10 +5,8 @@ if size > 9 || size < 3
   puts "Wrong size"
   return
 else
-
   vector = Array.new(size)
   matrix = Array.new(size).map! { Array.new(size) }
-
   for i in 0...size do
     vector[i] = i + 1
   end
