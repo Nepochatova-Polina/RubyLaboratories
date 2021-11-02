@@ -14,32 +14,35 @@ class Product
     @id.to_s + ', ' + @name + ', ' + @upc.to_s + ', ' + @producer + ', ' + @price.to_s + ', ' + @shelf_life.to_s + ', ' + @num.to_s
   end
 
-  def self.find_by_fname(name)
-    ObjectSpace.each_object(Product) { |o| puts o.to_s  if o.name == name }
+  def self.find_by_fname(array,name)
+    array.each  { |o| puts o.to_s  if o.name == name }
     nil
   end
-  def self.find_by_price(name,price)
-    ObjectSpace.each_object(Product) { |o| puts o.to_s  if o.name == name && o.price < price }
+  def self.find_by_price(array,name,price)
+    array.each { |o| puts o.to_s  if o.name == name && o.price < price }
     nil
   end
-  def self.find_by_shelf_life(shelf_life)
-    ObjectSpace.each_object(Product) { |o| puts o.to_s  if o.shelf_life > shelf_life }
+  def self.find_by_shelf_life(array,shelf_life)
+    array.each { |o| puts o.to_s  if o.shelf_life > shelf_life }
     nil
   end
 end
 
-Product.new(0001, "Dairy", 1111, "ValVal", 34.4, 145, 145)
-Product.new(0002, "Dairy", 1111, "ValVal", 23.4, 120, 105)
-Product.new(0003, "Bakery", 1101, "UKRST", 33.3, 87, 45)
-Product.new(0004, "Sweets", 1121, "AVK", 22.2, 211, 88)
-Product.new(0005, "Sweets", 1131, "IRISCo", 68.7, 754, 86)
-Product.new(0006, "Sweets", 1221, "SAharoK", 99.9, 211, 11)
+product1 = Product.new(0001, "Dairy", 1111, "ValVal", 34.4, 145, 145)
+product2 = Product.new(0002, "Dairy", 1111, "ValVal", 23.4, 120, 105)
+product3 = Product.new(0003, "Bakery", 1101, "UKRST", 33.3, 87, 45)
+product4 = Product.new(0004, "Sweets", 1121, "AVK", 22.2, 211, 88)
+product5 = Product.new(0005, "Sweets", 1131, "IRISCo", 68.7, 754, 86)
+product6 = Product.new(0006, "Sweets", 1221, "SAharoK", 99.9, 211, 11)
+
+array = [product1,product2,product3,product4,product5,product6]
 
 p "for a given name: "
- Product.find_by_fname('Dairy').to_s
+ Product.find_by_fname(array,'Dairy').to_s
 p "for a given name with a price less than the given one"
- Product.find_by_price('Dairy', 50).to_s
+ Product.find_by_price(array,'Dairy', 50).to_s
 p "with a shelf life longer than given one"
-Product.find_by_shelf_life(300).to_s
+Product.find_by_shelf_life(array,300).to_s
+
 
 
