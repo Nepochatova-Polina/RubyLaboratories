@@ -15,15 +15,15 @@ class Product
   end
 
   def self.find_by_fname(name)
-    ObjectSpace.each_object(Product) { |o| return o if o.name == name }
+    ObjectSpace.each_object(Product) { |o| puts o.to_s  if o.name == name }
     nil
   end
   def self.find_by_price(name,price)
-    ObjectSpace.each_object(Product) { |o| return o if o.name == name && o.price == price }
+    ObjectSpace.each_object(Product) { |o| puts o.to_s  if o.name == name && o.price < price }
     nil
   end
   def self.find_by_shelf_life(shelf_life)
-    ObjectSpace.each_object(Product) { |o| return o if o.shelf_life > shelf_life }
+    ObjectSpace.each_object(Product) { |o| puts o.to_s  if o.shelf_life > shelf_life }
     nil
   end
 end
@@ -35,8 +35,11 @@ Product.new(0004, "Sweets", 1121, "AVK", 22.2, 211, 88)
 Product.new(0005, "Sweets", 1131, "IRISCo", 68.7, 754, 86)
 Product.new(0006, "Sweets", 1221, "SAharoK", 99.9, 211, 11)
 
-puts Product.find_by_fname('Bakery').to_s
-puts Product.find_by_price('Dairy', 34.4).to_s
-puts Product.find_by_shelf_life(211).to_s
+p "for a given name: "
+ Product.find_by_fname('Dairy').to_s
+p "for a given name with a price less than the given one"
+ Product.find_by_price('Dairy', 50).to_s
+p "with a shelf life longer than given one"
+Product.find_by_shelf_life(300).to_s
 
 
