@@ -10,6 +10,8 @@ p array1
 
 i = 7
 x = 0
+
+
 while i >= 0 do
   array2[x] = array1[i]
   i-= 1
